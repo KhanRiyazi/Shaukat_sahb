@@ -1,0 +1,398 @@
+2025-11-06 15:51:26,439 - main - INFO - Starting Master AI API in development environment
+2025-11-06 15:51:26,489 - main - INFO - Database initialized successfully
+2025-11-06 15:51:26,498 - main - INFO - Application startup completed
+2025-11-06 15:55:30,197 - main - INFO - Shutting down Master AI API
+2025-11-06 15:56:01,507 - main - INFO - Starting Master AI API in development environment
+2025-11-06 15:56:01,515 - main - INFO - Database initialized successfully
+2025-11-06 15:56:01,523 - main - INFO - Application startup completed
+2025-11-06 16:06:36,843 - main - INFO - Shutting down Master AI API
+2025-11-06 16:07:04,722 - main - INFO - Starting Master AI API in development environment
+2025-11-06 16:07:04,727 - main - INFO - Database initialized successfully
+2025-11-06 16:07:04,730 - main - INFO - Application startup completed
+2025-11-06 16:07:22,551 - main - ERROR - Unhandled exception: '127.0.0.1:2025-11-06T10:37'
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 74, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\main.py", line 326, in join_waitlist
+    if rate_limiter.is_rate_limited(client_info["ip_address"]):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\main.py", line 261, in is_rate_limited
+    return self.requests[key] > self.requests_per_minute
+           ~~~~~~~~~~~~~^^^^^
+KeyError: '127.0.0.1:2025-11-06T10:37'
+2025-11-06 16:08:00,179 - main - ERROR - Unhandled exception: '127.0.0.1:2025-11-06T10:38'
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 74, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\main.py", line 383, in enroll
+    if rate_limiter.is_rate_limited(client_info["ip_address"]):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\main.py", line 261, in is_rate_limited
+    return self.requests[key] > self.requests_per_minute
+           ~~~~~~~~~~~~~^^^^^
+KeyError: '127.0.0.1:2025-11-06T10:38'
+2025-11-06 16:12:04,177 - main - INFO - Shutting down Master AI API
+2025-11-06 16:12:06,270 - main - INFO - Starting Master AI API in development environment
+2025-11-06 16:12:06,292 - main - INFO - Database initialized successfully
+2025-11-06 16:12:06,296 - main - INFO - Application startup completed
+2025-11-06 16:12:25,002 - main - INFO - Starting Master AI API in development environment
+2025-11-06 16:12:25,005 - main - INFO - Database initialized successfully
+2025-11-06 16:12:25,010 - main - INFO - Application startup completed
+2025-11-06 16:12:44,639 - main - ERROR - Rate limiter error: '127.0.0.1:2025-11-06T10:42'
+2025-11-06 16:12:44,665 - main - INFO - New enrollment: Rizwan Ali (rizwanrka826@gmail.com) for Data Foundations
+2025-11-06 16:14:59,958 - main - INFO - Shutting down Master AI API
+2025-11-06 16:19:07,843 - main - INFO - Shutting down Master AI API
+2025-11-06 16:19:09,769 - main - INFO - Starting Master AI API in development environment
+2025-11-06 16:19:09,771 - main - INFO - Initializing database...
+2025-11-06 16:19:09,781 - main - DEBUG - Database connection established
+2025-11-06 16:19:09,860 - main - DEBUG - Waitlist table checked/created
+2025-11-06 16:19:09,885 - main - DEBUG - Enrollments table checked/created
+2025-11-06 16:19:09,906 - main - DEBUG - Analytics table checked/created
+2025-11-06 16:19:09,923 - main - INFO - Database initialized successfully
+2025-11-06 16:19:09,949 - main - DEBUG - Database connection closed
+2025-11-06 16:19:09,968 - main - DEBUG - Database connection established
+2025-11-06 16:19:09,972 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-06 16:19:09,976 - main - INFO - Table waitlist: 0 rows
+2025-11-06 16:19:09,983 - main - INFO - Table enrollments: 1 rows
+2025-11-06 16:19:09,985 - main - INFO - Table analytics: 4 rows
+2025-11-06 16:19:09,987 - main - DEBUG - Database connection closed
+2025-11-06 16:19:10,004 - main - INFO - Application startup completed
+2025-11-06 16:19:17,195 - main - INFO - Starting Master AI API in development environment
+2025-11-06 16:19:17,195 - main - INFO - Initializing database...
+2025-11-06 16:19:17,213 - main - DEBUG - Database connection established
+2025-11-06 16:19:17,231 - main - DEBUG - Waitlist table checked/created
+2025-11-06 16:19:17,243 - main - DEBUG - Enrollments table checked/created
+2025-11-06 16:19:17,249 - main - DEBUG - Analytics table checked/created
+2025-11-06 16:19:17,249 - main - INFO - Database initialized successfully
+2025-11-06 16:19:17,265 - main - DEBUG - Database connection closed
+2025-11-06 16:19:17,312 - main - DEBUG - Database connection established
+2025-11-06 16:19:17,325 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-06 16:19:17,334 - main - INFO - Table waitlist: 0 rows
+2025-11-06 16:19:17,343 - main - INFO - Table enrollments: 1 rows
+2025-11-06 16:19:17,349 - main - INFO - Table analytics: 4 rows
+2025-11-06 16:19:17,353 - main - DEBUG - Database connection closed
+2025-11-06 16:19:17,366 - main - INFO - Application startup completed
+2025-11-06 16:19:30,004 - main - DEBUG - Client info: {'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'referer': None}
+2025-11-06 16:19:30,009 - main - DEBUG - Database connection established
+2025-11-06 16:19:30,039 - main - DEBUG - Page view tracked in analytics
+2025-11-06 16:19:30,045 - main - DEBUG - Database connection closed
+2025-11-06 16:19:49,232 - main - INFO - Enrollment request received: Gudiya, rizwanrka826@gmail.com, Data Foundations
+2025-11-06 16:19:49,264 - main - DEBUG - Client info: {'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'referer': 'http://127.0.0.1:8000/'}
+2025-11-06 16:19:49,266 - main - DEBUG - Rate limit check: 127.0.0.1:2025-11-06T10:49 = 1
+2025-11-06 16:19:49,267 - main - DEBUG - Cleaned old rate limit key: 127.0.0.1:2025-11-06T10:49
+2025-11-06 16:19:49,270 - main - ERROR - Rate limiter error: '127.0.0.1:2025-11-06T10:49'
+2025-11-06 16:19:49,290 - main - DEBUG - Database connection established
+2025-11-06 16:19:49,300 - main - INFO - Duplicate enrollment attempt: rizwanrka826@gmail.com for Data Foundations
+2025-11-06 16:19:49,334 - main - DEBUG - Database connection closed
+2025-11-06 16:30:08,410 - main - INFO - Shutting down Master AI API
+2025-11-06 16:30:16,377 - main - INFO - Starting Master AI API in development environment
+2025-11-06 16:30:16,377 - main - INFO - Initializing database...
+2025-11-06 16:30:16,380 - main - DEBUG - Database connection established
+2025-11-06 16:30:16,382 - main - DEBUG - Waitlist table checked/created
+2025-11-06 16:30:16,383 - main - DEBUG - Enrollments table checked/created
+2025-11-06 16:30:16,385 - main - DEBUG - Analytics table checked/created
+2025-11-06 16:30:16,386 - main - INFO - Database initialized successfully
+2025-11-06 16:30:16,389 - main - DEBUG - Database connection closed
+2025-11-06 16:30:16,391 - main - DEBUG - Database connection established
+2025-11-06 16:30:16,391 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-06 16:30:16,394 - main - INFO - Table waitlist: 0 rows
+2025-11-06 16:30:16,395 - main - INFO - Table enrollments: 1 rows
+2025-11-06 16:30:16,397 - main - INFO - Table analytics: 5 rows
+2025-11-06 16:30:16,404 - main - DEBUG - Database connection closed
+2025-11-06 16:30:16,415 - main - INFO - Application startup completed
+2025-11-06 16:30:23,490 - main - DEBUG - Client info: {'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'referer': None}
+2025-11-06 16:30:23,492 - main - DEBUG - Database connection established
+2025-11-06 16:30:23,525 - main - DEBUG - Page view tracked in analytics
+2025-11-06 16:30:23,532 - main - DEBUG - Database connection closed
+2025-11-06 16:30:24,015 - main - DEBUG - Database connection established
+2025-11-06 16:30:24,059 - main - DEBUG - Database connection closed
+2025-11-06 16:30:24,192 - main - DEBUG - Database connection established
+2025-11-06 16:30:24,239 - main - DEBUG - Database connection closed
+2025-11-06 16:30:47,118 - main - INFO - Enrollment request received: Rizwan Ali, rizwanrka826@gmail.com, Machine Learning
+2025-11-06 16:30:47,151 - main - DEBUG - Client info: {'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'referer': 'http://127.0.0.1:8000/'}
+2025-11-06 16:30:47,161 - main - DEBUG - Rate limit check: 127.0.0.1:2025-11-06T11:00 = 1
+2025-11-06 16:30:47,161 - main - DEBUG - Cleaned old rate limit key: 127.0.0.1:2025-11-06T11:00
+2025-11-06 16:30:47,161 - main - ERROR - Rate limiter error: '127.0.0.1:2025-11-06T11:00'
+2025-11-06 16:30:47,182 - main - DEBUG - Database connection established
+2025-11-06 16:30:47,200 - main - INFO - New enrollment saved: Rizwan Ali (rizwanrka826@gmail.com) for Machine Learning
+2025-11-06 16:30:47,249 - main - DEBUG - Database connection closed
+2025-11-06 16:30:47,289 - main - DEBUG - Database connection established
+2025-11-06 16:30:47,308 - main - DEBUG - Database connection closed
+2025-11-06 16:30:47,346 - main - DEBUG - Database connection established
+2025-11-06 16:30:47,368 - main - DEBUG - Database connection closed
+2025-11-06 16:31:31,447 - main - INFO - Shutting down Master AI API
+2025-11-06 16:41:04,827 - main - INFO - Starting Master AI API in development environment
+2025-11-06 16:41:04,827 - main - INFO - Initializing database...
+2025-11-06 16:41:04,832 - main - DEBUG - Database connection established
+2025-11-06 16:41:04,854 - main - DEBUG - Waitlist table checked/created
+2025-11-06 16:41:04,855 - main - DEBUG - Enrollments table checked/created
+2025-11-06 16:41:04,856 - main - DEBUG - Analytics table checked/created
+2025-11-06 16:41:04,857 - main - INFO - Database initialized successfully
+2025-11-06 16:41:04,859 - main - DEBUG - Database connection closed
+2025-11-06 16:41:04,876 - main - DEBUG - Database connection established
+2025-11-06 16:41:04,884 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-06 16:41:04,886 - main - INFO - Table waitlist: 0 rows
+2025-11-06 16:41:04,888 - main - INFO - Table enrollments: 2 rows
+2025-11-06 16:41:04,893 - main - INFO - Table analytics: 6 rows
+2025-11-06 16:41:04,896 - main - DEBUG - Database connection closed
+2025-11-06 16:41:04,906 - main - INFO - Application startup completed
+2025-11-06 16:41:10,188 - main - DEBUG - Client info: {'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'referer': None}
+2025-11-06 16:41:10,202 - main - DEBUG - Database connection established
+2025-11-06 16:41:10,241 - main - DEBUG - Page view tracked in analytics
+2025-11-06 16:41:10,276 - main - DEBUG - Database connection closed
+2025-11-06 16:41:10,435 - main - DEBUG - Database connection established
+2025-11-06 16:41:10,460 - main - DEBUG - Database connection closed
+2025-11-06 16:41:10,484 - main - DEBUG - Database connection established
+2025-11-06 16:41:10,506 - main - DEBUG - Database connection closed
+2025-11-06 16:41:21,385 - main - DEBUG - Database connection established
+2025-11-06 16:41:21,393 - main - DEBUG - Database connection closed
+2025-11-06 16:41:23,229 - main - DEBUG - Database connection established
+2025-11-06 16:41:23,235 - main - DEBUG - Database connection closed
+2025-11-06 16:41:25,972 - main - DEBUG - Database connection established
+2025-11-06 16:41:25,975 - main - DEBUG - Database connection closed
+2025-11-06 16:41:28,460 - main - DEBUG - Database connection established
+2025-11-06 16:41:28,492 - main - DEBUG - Database connection closed
+2025-11-06 16:41:32,316 - main - DEBUG - Database connection established
+2025-11-06 16:41:32,318 - main - DEBUG - Database connection closed
+2025-11-06 16:42:41,024 - main - DEBUG - Database connection established
+2025-11-06 16:42:41,033 - main - DEBUG - Database connection closed
+2025-11-06 16:42:45,406 - main - DEBUG - Database connection established
+2025-11-06 16:42:45,409 - main - DEBUG - Database connection closed
+2025-11-06 16:42:49,938 - main - DEBUG - Database connection established
+2025-11-06 16:42:49,944 - main - DEBUG - Database connection closed
+2025-11-06 16:43:09,956 - main - INFO - Shutting down Master AI API
+2025-11-06 16:56:46,749 - main - DEBUG - Client info: {'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'referer': None}
+2025-11-06 16:56:46,802 - main - DEBUG - Database connection established
+2025-11-06 16:56:46,802 - main - DEBUG - Page view tracked in analytics
+2025-11-06 16:56:46,812 - main - DEBUG - Database connection closed
+2025-11-06 16:56:47,067 - main - DEBUG - Database connection established
+2025-11-06 16:56:47,100 - main - DEBUG - Database connection closed
+2025-11-06 16:56:47,460 - main - DEBUG - Database connection established
+2025-11-06 16:56:47,639 - main - DEBUG - Database connection closed
+2025-11-06 16:56:47,790 - main - DEBUG - Database connection established
+2025-11-06 16:56:47,901 - main - INFO - Starting Master AI API in development environment
+2025-11-06 16:56:47,901 - main - DEBUG - Database connection closed
+2025-11-06 16:56:48,098 - main - INFO - Initializing database...
+2025-11-06 16:56:48,278 - main - DEBUG - Database connection established
+2025-11-06 16:56:48,367 - main - DEBUG - Database connection closed
+2025-11-06 16:56:48,376 - main - DEBUG - Database connection established
+2025-11-06 16:56:48,454 - main - DEBUG - Waitlist table checked/created
+2025-11-06 16:56:48,500 - main - DEBUG - Enrollments table checked/created
+2025-11-06 16:56:48,633 - main - DEBUG - Analytics table checked/created
+2025-11-06 16:56:48,701 - main - INFO - Database initialized successfully
+2025-11-06 16:56:48,768 - main - DEBUG - Database connection closed
+2025-11-06 16:56:49,090 - main - DEBUG - Database connection established
+2025-11-06 16:56:49,149 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-06 16:56:49,357 - main - INFO - Table waitlist: 0 rows
+2025-11-06 16:56:49,430 - main - INFO - Table enrollments: 2 rows
+2025-11-06 16:56:49,563 - main - INFO - Table analytics: 8 rows
+2025-11-06 16:56:49,672 - main - DEBUG - Database connection closed
+2025-11-06 16:56:49,752 - main - INFO - Application startup completed
+2025-11-06 16:57:00,494 - main - DEBUG - Database connection established
+2025-11-06 16:57:00,529 - main - DEBUG - Database connection closed
+2025-11-06 16:57:56,673 - main - INFO - Shutting down Master AI API
+2025-11-07 10:26:20,476 - main - INFO - Starting Master AI API in development environment
+2025-11-07 10:26:20,477 - main - INFO - Initializing database...
+2025-11-07 10:26:20,487 - main - DEBUG - Database connection established
+2025-11-07 10:26:20,487 - main - DEBUG - Waitlist table checked/created
+2025-11-07 10:26:20,488 - main - DEBUG - Enrollments table checked/created
+2025-11-07 10:26:20,489 - main - DEBUG - Analytics table checked/created
+2025-11-07 10:26:20,490 - main - INFO - Database initialized successfully
+2025-11-07 10:26:20,491 - main - DEBUG - Database connection closed
+2025-11-07 10:26:20,494 - main - DEBUG - Database connection established
+2025-11-07 10:26:20,495 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-07 10:26:20,497 - main - INFO - Table waitlist: 0 rows
+2025-11-07 10:26:20,497 - main - INFO - Table enrollments: 2 rows
+2025-11-07 10:26:20,499 - main - INFO - Table analytics: 8 rows
+2025-11-07 10:26:20,500 - main - DEBUG - Database connection closed
+2025-11-07 10:26:20,501 - main - INFO - Application startup completed
+2025-11-07 10:26:25,587 - main - DEBUG - Client info: {'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'referer': None}
+2025-11-07 10:26:25,624 - main - DEBUG - Database connection established
+2025-11-07 10:26:25,641 - main - DEBUG - Page view tracked in analytics
+2025-11-07 10:26:25,657 - main - DEBUG - Database connection closed
+2025-11-07 10:26:25,811 - main - DEBUG - Database connection established
+2025-11-07 10:26:25,811 - main - DEBUG - Database connection closed
+2025-11-07 10:26:25,824 - main - DEBUG - Database connection established
+2025-11-07 10:26:25,826 - main - DEBUG - Database connection closed
+2025-11-07 10:26:26,438 - main - ERROR - Unhandled exception: Too much data for declared Content-Length
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await response(scope, receive, send)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\responses.py", line 158, in __call__
+    await send({"type": "http.response.body", "body": self.body})
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 50, in sender
+    await send(message)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\_exception_handler.py", line 50, in sender
+    await send(message)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\starlette\middleware\errors.py", line 161, in _send
+    await send(message)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 530, in send
+    output = self.conn.send(event)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\h11\_connection.py", line 538, in send
+    data_list = self.send_with_data_passthrough(event)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\h11\_connection.py", line 571, in send_with_data_passthrough
+    writer(event, data_list.append)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\h11\_writers.py", line 65, in __call__
+    self.send_data(event.data, write)
+  File "C:\Users\Dell\Desktop\AI-Era\.venv\Lib\site-packages\h11\_writers.py", line 91, in send_data
+    raise LocalProtocolError("Too much data for declared Content-Length")
+h11._util.LocalProtocolError: Too much data for declared Content-Length
+2025-11-07 10:29:47,193 - main - INFO - Shutting down Master AI API
+2025-11-07 10:29:48,673 - main - INFO - Starting Master AI API in development environment
+2025-11-07 10:29:48,673 - main - INFO - Initializing database...
+2025-11-07 10:29:48,676 - main - DEBUG - Database connection established
+2025-11-07 10:29:48,677 - main - INFO - Database initialized successfully
+2025-11-07 10:29:48,678 - main - DEBUG - Database connection closed
+2025-11-07 10:29:48,683 - main - DEBUG - Database connection established
+2025-11-07 10:29:48,683 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-07 10:29:48,684 - main - INFO - Table waitlist: 0 rows
+2025-11-07 10:29:48,684 - main - INFO - Table enrollments: 2 rows
+2025-11-07 10:29:48,685 - main - INFO - Table analytics: 9 rows
+2025-11-07 10:29:48,686 - main - DEBUG - Database connection closed
+2025-11-07 10:29:48,687 - main - INFO - Application startup completed
+2025-11-07 10:29:55,540 - main - INFO - Shutting down Master AI API
+2025-11-07 10:30:08,610 - main - INFO - Starting Master AI API in development environment
+2025-11-07 10:30:08,611 - main - INFO - Initializing database...
+2025-11-07 10:30:08,615 - main - DEBUG - Database connection established
+2025-11-07 10:30:08,615 - main - INFO - Database initialized successfully
+2025-11-07 10:30:08,617 - main - DEBUG - Database connection closed
+2025-11-07 10:30:08,620 - main - DEBUG - Database connection established
+2025-11-07 10:30:08,620 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-07 10:30:08,622 - main - INFO - Table waitlist: 0 rows
+2025-11-07 10:30:08,623 - main - INFO - Table enrollments: 2 rows
+2025-11-07 10:30:08,624 - main - INFO - Table analytics: 9 rows
+2025-11-07 10:30:08,625 - main - DEBUG - Database connection closed
+2025-11-07 10:30:08,625 - main - INFO - Application startup completed
+2025-11-07 10:31:26,336 - main - DEBUG - Database connection established
+2025-11-07 10:31:26,338 - main - DEBUG - Database connection closed
+2025-11-07 10:31:26,343 - main - DEBUG - Database connection established
+2025-11-07 10:31:26,355 - main - DEBUG - Database connection closed
+2025-11-07 10:44:55,579 - main - INFO - Starting Master AI API in development environment
+2025-11-07 10:44:55,580 - main - INFO - Initializing database...
+2025-11-07 10:44:55,581 - main - DEBUG - Database connection established
+2025-11-07 10:44:55,582 - main - INFO - Database initialized successfully
+2025-11-07 10:44:55,583 - main - DEBUG - Database connection closed
+2025-11-07 10:44:55,585 - main - DEBUG - Database connection established
+2025-11-07 10:44:55,586 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-07 10:44:55,588 - main - INFO - Table waitlist: 0 rows
+2025-11-07 10:44:55,589 - main - INFO - Table enrollments: 2 rows
+2025-11-07 10:44:55,589 - main - INFO - Table analytics: 9 rows
+2025-11-07 10:44:55,591 - main - DEBUG - Database connection closed
+2025-11-07 10:44:55,594 - main - INFO - Application startup completed
+2025-11-07 10:44:59,254 - main - DEBUG - Database connection established
+2025-11-07 10:44:59,262 - main - DEBUG - Database connection closed
+2025-11-07 10:44:59,309 - main - DEBUG - Database connection established
+2025-11-07 10:44:59,317 - main - DEBUG - Database connection closed
+2025-11-07 15:19:55,197 - main - INFO - Starting Master AI API in development environment
+2025-11-07 15:19:55,200 - main - INFO - Initializing database...
+2025-11-07 15:19:55,218 - main - DEBUG - Database connection established
+2025-11-07 15:19:55,227 - main - INFO - Database initialized successfully
+2025-11-07 15:19:55,230 - main - DEBUG - Database connection closed
+2025-11-07 15:19:55,235 - main - DEBUG - Database connection established
+2025-11-07 15:19:55,245 - main - INFO - Database tables: ['waitlist', 'sqlite_sequence', 'enrollments', 'analytics']
+2025-11-07 15:19:55,247 - main - INFO - Table waitlist: 0 rows
+2025-11-07 15:19:55,247 - main - INFO - Table enrollments: 2 rows
+2025-11-07 15:19:55,253 - main - INFO - Table analytics: 9 rows
+2025-11-07 15:19:55,258 - main - DEBUG - Database connection closed
+2025-11-07 15:19:55,261 - main - INFO - Application startup completed
+2025-11-07 15:19:57,372 - main - DEBUG - Client info: {'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'referer': None}
+2025-11-07 15:19:57,394 - main - DEBUG - Database connection established
+2025-11-07 15:19:57,431 - main - DEBUG - Page view tracked in analytics
+2025-11-07 15:19:57,472 - main - DEBUG - Database connection closed
+2025-11-07 15:19:58,167 - main - DEBUG - Database connection established
+2025-11-07 15:19:58,172 - main - DEBUG - Database connection closed
+2025-11-07 15:19:58,179 - main - DEBUG - Database connection established
+2025-11-07 15:19:58,188 - main - DEBUG - Database connection closed
+2025-11-07 15:20:03,078 - main - DEBUG - Database connection established
+2025-11-07 15:20:03,080 - main - DEBUG - Database connection closed
+2025-11-07 15:20:04,427 - main - DEBUG - Database connection established
+2025-11-07 15:20:04,429 - main - DEBUG - Database connection closed
+2025-11-07 15:20:05,627 - main - DEBUG - Database connection established
+2025-11-07 15:20:05,630 - main - DEBUG - Database connection closed
+2025-11-07 15:27:02,580 - main - INFO - Shutting down Master AI API

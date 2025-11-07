@@ -1,0 +1,1627 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Master AI — AI‑Empowered Education</title>
+    <meta name="description"
+        content="A forward-thinking landing page introducing AI-empowered education: learn practical AI, build projects, join cohorts and master AI with hands-on learning." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --muted: #9aa4b2;
+            --accent: #6ee7b7;
+            --accent-2: #7c5cff;
+            --glass: rgba(255, 255, 255, 0.04);
+            --glass-2: rgba(255, 255, 255, 0.02);
+            --radius: 14px;
+            --transition: all 0.3s ease;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background: linear-gradient(180deg, #071027 0%, #071026 40%, #071222 100%);
+            color: #e6eef6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(7, 16, 39, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-mark {
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            color: #062024;
+            box-shadow: 0 4px 12px rgba(110, 231, 183, 0.2);
+        }
+
+        .nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav a:not(.cta):hover {
+            color: var(--accent);
+            background: var(--glass);
+        }
+
+        .nav a.cta {
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            color: #04121a;
+            box-shadow: 0 4px 12px rgba(110, 231, 183, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav a.cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
+        }
+
+        .nav a.cta:hover::before {
+            left: 100%;
+        }
+
+        .nav a.cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(110, 231, 183, 0.4);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 32px;
+            align-items: center;
+            padding: 48px 0;
+            min-height: 80vh;
+        }
+
+        @media (max-width:920px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--glass);
+            padding: 8px 16px;
+            border-radius: 999px;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(110, 231, 183, 0.1);
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 10px 0 6px;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #e6eef6 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p.lead {
+            color: var(--muted);
+            margin: 6px 0 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .features {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            background: var(--glass);
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            color: var(--muted);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            background: rgba(110, 231, 183, 0.1);
+            color: var(--accent);
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(2, 6, 23, 0.8);
+            border-color: rgba(110, 231, 183, 0.1);
+        }
+
+        .subscribe {
+            position: relative;
+        }
+
+        .subscribe input[type="email"] {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: transparent;
+            color: inherit;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .subscribe input[type="email"]:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(110, 231, 183, 0.1);
+        }
+
+        .subscribe button {
+            margin-top: 12px;
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 0;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            color: #07111a;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subscribe button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(110, 231, 183, 0.3);
+        }
+
+        .stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .stat {
+            background: var(--glass-2);
+            padding: 16px;
+            border-radius: 12px;
+            flex: 1;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .stat:hover {
+            transform: translateY(-3px);
+            background: rgba(110, 231, 183, 0.05);
+        }
+
+        .stat h3 {
+            margin: 0;
+            font-size: 22px;
+            color: var(--accent);
+        }
+
+        .stat p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .right-hero {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .preview {
+            padding: 20px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(124, 92, 255, 0.06), rgba(110, 231, 183, 0.03));
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .preview h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .preview small {
+            color: var(--muted);
+        }
+
+        main.section {
+            padding: 28px 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        @media(max-width:920px) {
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-card {
+            padding: 24px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+            min-height: 120px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(110, 231, 183, 0.05);
+            border-color: rgba(110, 231, 183, 0.1);
+        }
+
+        .feature-card h4 {
+            margin: 6px 0;
+            color: var(--accent);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .timeline .step {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            transition: var(--transition);
+            padding: 12px;
+            border-radius: 12px;
+        }
+
+        .timeline .step:hover {
+            background: rgba(110, 231, 183, 0.05);
+            transform: translateX(5px);
+        }
+
+        .step .num {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            color: #041419;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(110, 231, 183, 0.3);
+        }
+
+        footer {
+            margin-top: 28px;
+            padding: 24px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            color: var(--muted);
+        }
+
+        /* Admin Panel Styles */
+        .admin-panel {
+            margin-top: 40px;
+            border: 2px solid rgba(110, 231, 183, 0.3);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .admin-header {
+            background: rgba(110, 231, 183, 0.1);
+            padding: 20px;
+            border-bottom: 1px solid rgba(110, 231, 183, 0.2);
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .admin-tab {
+            padding: 10px 20px;
+            background: var(--glass);
+            border: none;
+            border-radius: 8px;
+            color: var(--muted);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .admin-tab.active {
+            background: var(--accent);
+            color: #04121a;
+            font-weight: 600;
+        }
+
+        .admin-content {
+            padding: 20px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .data-table th {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .action-btn {
+            padding: 6px 12px;
+            margin: 2px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: var(--transition);
+        }
+
+        .edit-btn {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+        }
+
+        .delete-btn {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .status-pending {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+
+        .status-approved {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        .debug-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .debug-stat {
+            background: var(--glass);
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .debug-stat h4 {
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        /* small interactions */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.7);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(110, 231, 183, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(110, 231, 183, 0);
+            }
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            background: rgba(2, 6, 23, 0.8);
+            visibility: hidden;
+            opacity: 0;
+            transition: all .3s ease;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal.open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal .dialog {
+            width: 520px;
+            max-width: 92%;
+            background: var(--card);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(110, 231, 183, 0.1);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.open .dialog {
+            transform: translateY(0);
+        }
+
+        /* small helper */
+        .muted {
+            color: var(--muted);
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--glass);
+            border-radius: 999px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pill:hover {
+            background: rgba(110, 231, 183, 0.1);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Form improvements */
+        input,
+        select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: transparent;
+            color: inherit;
+            font-size: 15px;
+            transition: var(--transition);
+            margin-bottom: 12px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(110, 231, 183, 0.1);
+        }
+
+        button {
+            padding: 14px 24px;
+            border-radius: 12px;
+            border: 0;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            color: #07111a;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            flex: 1;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(110, 231, 183, 0.3);
+        }
+
+        button.secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid rgba(110, 231, 183, 0.3);
+        }
+
+        button.secondary:hover {
+            background: rgba(110, 231, 183, 0.1);
+        }
+
+        /* Progress bar */
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: var(--glass);
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        /* Floating elements */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Loading states */
+        .loading {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid transparent;
+            border-top: 2px solid currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Toast notifications */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 16px 20px;
+            background: var(--card);
+            border: 1px solid rgba(110, 231, 183, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            max-width: 400px;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.success {
+            border-color: rgba(110, 231, 183, 0.4);
+        }
+
+        .toast.error {
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        /* Success states */
+        .success-state {
+            background: rgba(110, 231, 183, 0.1) !important;
+            color: var(--accent) !important;
+            border-color: rgba(110, 231, 183, 0.3) !important;
+        }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        @media (max-width: 920px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--card);
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .nav.open {
+                transform: translateY(0);
+                opacity: 1;
+                display: flex;
+            }
+
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-mark">AI</div>
+                <div>
+                    <div style="font-weight:800">Master AI</div>
+                    <div class="muted" style="font-size:12px">AI‑Empowered Education</div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <nav class="nav" id="mainNav">
+                <a href="#why">Why AI?</a>
+                <a href="#curriculum">Curriculum</a>
+                <a href="#cohorts">Cohorts</a>
+                <a class="cta" href="#enroll">Enroll</a>
+                <a href="#admin">Admin</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div>
+                <div class="eyebrow">Future-ready • Project-first • Mentored</div>
+                <h1>Master AI Through Hands‑On Learning</h1>
+                <p class="lead">Go from AI curious to AI capable with our intensive program. Build real projects, learn
+                    from industry experts, and join a community of forward-thinking learners.</p>
+
+                <div class="card">
+                    <div style="display:flex;gap:14px;align-items:center;justify-content:space-between">
+                        <div>
+                            <div class="features">
+                                <div class="badge">Project-based</div>
+                                <div class="badge">Career-focused</div>
+                                <div class="badge">Ethics & Safety</div>
+                            </div>
+                            <div style="margin-top:12px;color:var(--muted)">Join weekly masterclasses and build a
+                                portfolio employers notice.</div>
+                        </div>
+                        <div style="width:220px;text-align:right">
+                            <div style="font-size:12px;color:var(--muted)">Next cohort starts</div>
+                            <div style="font-weight:800;font-size:18px">Jan 6, 2026</div>
+                            <button class="pill" style="margin-top:10px" id="learnMore">Get syllabus</button>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>12+</h3>
+                            <p>Real projects</p>
+                        </div>
+                        <div class="stat">
+                            <h3>8 weeks</h3>
+                            <p>Core track</p>
+                        </div>
+                        <div class="stat">
+                            <h3>Mentor</h3>
+                            <p>1:15 support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:12px;margin-top:16px;align-items:center">
+                    <div class="card" style="flex:1">
+                        <div style="display:flex;gap:10px;align-items:center">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                <path d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <div>
+                                <div style="font-weight:800">Hands-on labs</div>
+                                <small class="muted">Build real models, not slides</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width:300px">
+                        <div class="subscribe">
+                            <label for="email" style="font-weight:800">Join waitlist</label>
+                            <input id="email" type="email" placeholder="your@email.com" />
+                            <button id="joinBtn">Reserve spot</button>
+                            <div id="msg" class="muted" style="margin-top:8px;font-size:13px"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <aside class="right-hero">
+                <div class="preview card floating">
+                    <h4>Quick preview</h4>
+                    <small class="muted">A sample module</small>
+                    <ol style="margin:10px 0 0;padding-left:18px;color:var(--muted)">
+                        <li>Data prep & visualisation (pandas & plotting)</li>
+                        <li>ML fundamentals (linear models, trees)</li>
+                        <li>Deep learning intro (hands-on CNN project)</li>
+                        <li>Responsible AI + deployment (FastAPI)</li>
+                    </ol>
+                </div>
+
+                <div class="card">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>
+                            <div style="font-weight:800">Scholarships</div>
+                            <small class="muted">Merit & need-based</small>
+                        </div>
+                        <div class="pulse pill" id="scholarshipBtn">Apply</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="font-size:13px;color:var(--muted)">Trusted by learners worldwide • Project-first
+                        curriculum • No-nonsense outcomes</div>
+                </div>
+            </aside>
+        </section>
+
+        <main>
+            <section id="why" class="section card">
+                <h3>Why AI‑empowered education matters</h3>
+                <p class="muted">AI is reshaping jobs, creativity, and problem solving. Today's education must teach not
+                    only theory, but how to apply AI responsibly to real problems. Our program is designed around three
+                    pillars:</p>
+                <div style="display:flex;gap:14px;margin-top:16px;flex-wrap:wrap">
+                    <div class="feature-card">
+                        <h4>Practical mastery</h4>
+                        <p class="muted">Project-based learning ensures you can demonstrate results — models, apps, and
+                            deployed services.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Ethical design</h4>
+                        <p class="muted">Understand fairness, privacy, and safety — build systems people can trust.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Career outcomes</h4>
+                        <p class="muted">Portfolio reviews, interview prep, and capstone projects designed for hiring
+                            managers.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="curriculum" class="section" style="margin-top:18px">
+                <div class="card">
+                    <h3>Curriculum highlights</h3>
+                    <div class="grid-3" style="margin-top:12px">
+                        <div class="feature-card">
+                            <h4>Foundations</h4>
+                            <p class="muted">Python, data wrangling, statistics.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Machine Learning</h4>
+                            <p class="muted">Supervised, unsupervised, model evaluation.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Deep Learning</h4>
+                            <p class="muted">Neural networks, CNNs, transformers basics.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Engineering</h4>
+                            <p class="muted">APIs, containers, model deployment.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Human-centered AI</h4>
+                            <p class="muted">Explainability, bias mitigation, privacy.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Capstone</h4>
+                            <p class="muted">End-to-end project: dataset to deployed app.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cohorts" class="section">
+                <div class="card">
+                    <h3>How it works — cohort roadmap</h3>
+                    <div class="timeline" style="margin-top:12px">
+                        <div class="step">
+                            <div class="num">1</div>
+                            <div><strong>Orientation</strong>
+                                <div class="muted">Set goals, tools, and team match.</div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="num">2</div>
+                            <div><strong>Core sprints</strong>
+                                <div class="muted">Weekly labs + mini projects.</div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="num">3</div>
+                            <div><strong>Capstone</strong>
+                                <div class="muted">Design, build, and deploy a real app.</div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="num">4</div>
+                            <div><strong>Career launch</strong>
+                                <div class="muted">Portfolio review and interview practice.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="enroll" class="section">
+                <div class="card">
+                    <h3>Reserve your seat</h3>
+                    <p class="muted">Fill your details and we'll send the syllabus & scholarship link.</p>
+                    <form id="enrollForm" style="margin-top:12px;display:grid;gap:10px">
+                        <input name="name" placeholder="Full name" required />
+                        <input name="email" type="email" placeholder="Email" required />
+                        <select name="track" required>
+                            <option value="">Choose track</option>
+                            <option>Data Foundations</option>
+                            <option>Machine Learning</option>
+                            <option>Deep Learning & MLOps</option>
+                        </select>
+                        <div style="display:flex;gap:10px">
+                            <button type="submit">Apply now</button>
+                            <button type="button" id="demoBtn" class="secondary">Request free demo</button>
+                        </div>
+                        <div id="enrollMsg" class="muted" style="font-size:13px"></div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Admin Panel Section -->
+            <section id="admin" class="section">
+                <div class="admin-panel card">
+                    <div class="admin-header">
+                        <h3>📊 Admin Dashboard - Full CRUD Operations</h3>
+                        <p class="muted">Real-time database management with Create, Read, Update, Delete operations</p>
+                    </div>
+
+                    <div class="admin-content">
+                        <div class="debug-stats" id="debugStats">
+                            <!-- Stats will be loaded here -->
+                        </div>
+
+                        <div class="admin-tabs">
+                            <button class="admin-tab active" data-tab="waitlist">Waitlist</button>
+                            <button class="admin-tab" data-tab="enrollments">Enrollments</button>
+                            <button class="admin-tab" data-tab="analytics">Analytics</button>
+                            <button class="admin-tab" data-tab="health">System Health</button>
+                        </div>
+
+                        <div class="tab-content">
+                            <div id="waitlist-tab" class="tab-pane active">
+                                <div
+                                    style="display: flex; justify-content: between; align-items: center; margin-bottom: 16px;">
+                                    <h4>Waitlist Subscribers</h4>
+                                    <button onclick="refreshData('waitlist')" class="pill">Refresh</button>
+                                </div>
+                                <div id="waitlist-data">
+                                    <!-- Waitlist data will be loaded here -->
+                                </div>
+                            </div>
+
+                            <div id="enrollments-tab" class="tab-pane">
+                                <div
+                                    style="display: flex; justify-content: between; align-items: center; margin-bottom: 16px;">
+                                    <h4>Course Enrollments</h4>
+                                    <button onclick="refreshData('enrollments')" class="pill">Refresh</button>
+                                </div>
+                                <div id="enrollments-data">
+                                    <!-- Enrollment data will be loaded here -->
+                                </div>
+                            </div>
+
+                            <div id="analytics-tab" class="tab-pane">
+                                <div
+                                    style="display: flex; justify-content: between; align-items: center; margin-bottom: 16px;">
+                                    <h4>Page Analytics</h4>
+                                    <button onclick="refreshData('analytics')" class="pill">Refresh</button>
+                                </div>
+                                <div id="analytics-data">
+                                    <!-- Analytics data will be loaded here -->
+                                </div>
+                            </div>
+
+                            <div id="health-tab" class="tab-pane">
+                                <div
+                                    style="display: flex; justify-content: between; align-items: center; margin-bottom: 16px;">
+                                    <h4>System Health</h4>
+                                    <button onclick="checkHealth()" class="pill">Check Health</button>
+                                </div>
+                                <div id="health-data">
+                                    <!-- Health data will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" style="margin-top:18px">
+                <div class="card">
+                    <h3>FAQ</h3>
+                    <details style="margin-top:10px">
+                        <summary style="cursor:pointer;padding:10px;border-radius:8px;transition:var(--transition)">Who
+                            is this for?</summary>
+                        <div class="muted" style="margin-top:8px;padding:0 10px 10px">Learners who want practical AI
+                            skills — beginners with Python or developers who want to transition.</div>
+                    </details>
+                    <details style="margin-top:10px">
+                        <summary style="cursor:pointer;padding:10px;border-radius:8px;transition:var(--transition)">Time
+                            commitment?</summary>
+                        <div class="muted" style="margin-top:8px;padding:0 10px 10px">8–12 hours/week for the core
+                            track, flexible for working learners.</div>
+                    </details>
+                    <details style="margin-top:10px">
+                        <summary style="cursor:pointer;padding:10px;border-radius:8px;transition:var(--transition)">
+                            Certificates?</summary>
+                        <div class="muted" style="margin-top:8px;padding:0 10px 10px">Certificate of completion and a
+                            public portfolio project you can share.</div>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+                <div>
+                    <div style="font-weight:800">Master AI</div>
+                    <div class="muted" style="font-size:13px">AI‑Empowered Education • Project-first • Ethical</div>
+                </div>
+                <div class="muted">© <span id="year"></span> • Built for the future</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastContainer"></div>
+
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <div class="dialog card">
+            <h3>Syllabus — Core track</h3>
+            <p class="muted">Week 1 — Python & data fundamentals<br>Week 2 — Statistics & EDA<br>Week 3 — Supervised
+                learning<br>Week 4 — Model evaluation<br>Week 5 — Deep learning basics<br>Week 6 — Model optimization &
+                MLOps<br>Week 7 — Responsible AI<br>Week 8 — Capstone & deployment</p>
+            <div style="display:flex;justify-content:flex-end;margin-top:12px"><button id="closeModal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // API configuration
+        const API_BASE = window.location.origin;
+
+        // Utility functions
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+                <div style="display:flex;align-items:center;gap:12px">
+                    <div style="font-weight:600">${message}</div>
+                </div>
+            `;
+
+            document.getElementById('toastContainer').appendChild(toast);
+
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+
+        function setLoading(button, isLoading) {
+            if (isLoading) {
+                button.classList.add('loading');
+                button.disabled = true;
+            } else {
+                button.classList.remove('loading');
+                button.disabled = false;
+            }
+        }
+
+        function setSuccess(button, message) {
+            button.classList.add('success-state');
+            button.textContent = message;
+            button.disabled = true;
+        }
+
+        // Admin Panel Functions
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API_BASE}/api/stats`);
+                const data = await response.json();
+
+                document.getElementById('debugStats').innerHTML = `
+                    <div class="debug-stat">
+                        <h4>${data.waitlist_total}</h4>
+                        <p>Waitlist Subscribers</p>
+                    </div>
+                    <div class="debug-stat">
+                        <h4>${data.enrollments_total}</h4>
+                        <p>Total Enrollments</p>
+                    </div>
+                    <div class="debug-stat">
+                        <h4>${data.recent_activity.waitlist_last_7_days}</h4>
+                        <p>Recent Waitlist (7d)</p>
+                    </div>
+                    <div class="debug-stat">
+                        <h4>${data.recent_activity.enrollments_last_7_days}</h4>
+                        <p>Recent Enrollments (7d)</p>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+        }
+
+        async function refreshData(type) {
+            try {
+                let endpoint, containerId;
+
+                switch (type) {
+                    case 'waitlist':
+                        endpoint = '/api/debug/waitlist';
+                        containerId = 'waitlist-data';
+                        break;
+                    case 'enrollments':
+                        endpoint = '/api/debug/enrollments';
+                        containerId = 'enrollments-data';
+                        break;
+                    case 'analytics':
+                        endpoint = '/api/debug/tables';
+                        containerId = 'analytics-data';
+                        break;
+                }
+
+                const response = await fetch(`${API_BASE}${endpoint}`);
+                const data = await response.json();
+
+                if (data.error) {
+                    document.getElementById(containerId).innerHTML = `<p class="muted">Error: ${data.error}</p>`;
+                    return;
+                }
+
+                renderData(type, data, containerId);
+                showToast(`${type.charAt(0).toUpperCase() + type.slice(1)} data refreshed!`);
+
+            } catch (error) {
+                console.error(`Error loading ${type}:`, error);
+                showToast(`Error loading ${type}`, 'error');
+            }
+        }
+
+        function renderData(type, data, containerId) {
+            let html = '';
+
+            switch (type) {
+                case 'waitlist':
+                    if (data.count === 0) {
+                        html = '<p class="muted">No waitlist entries yet.</p>';
+                    } else {
+                        html = `
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Email</th>
+                                        <th>Created</th>
+                                        <th>IP Address</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${data.data.map(item => `
+                                        <tr>
+                                            <td>${item.id}</td>
+                                            <td>${item.email}</td>
+                                            <td>${new Date(item.created_at).toLocaleDateString()}</td>
+                                            <td>${item.ip_address || 'N/A'}</td>
+                                            <td>
+                                                <button class="action-btn delete-btn" onclick="deleteWaitlist(${item.id})">Delete</button>
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        `;
+                    }
+                    break;
+
+                case 'enrollments':
+                    if (data.count === 0) {
+                        html = '<p class="muted">No enrollments yet.</p>';
+                    } else {
+                        html = `
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Track</th>
+                                        <th>Status</th>
+                                        <th>Created</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${data.data.map(item => `
+                                        <tr>
+                                            <td>${item.id}</td>
+                                            <td>${item.full_name}</td>
+                                            <td>${item.email}</td>
+                                            <td>${item.track}</td>
+                                            <td><span class="status-badge status-${item.status || 'pending'}">${item.status || 'pending'}</span></td>
+                                            <td>${new Date(item.created_at).toLocaleDateString()}</td>
+                                            <td>
+                                                <button class="action-btn edit-btn" onclick="updateEnrollment(${item.id}, 'approved')">Approve</button>
+                                                <button class="action-btn delete-btn" onclick="deleteEnrollment(${item.id})">Delete</button>
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        `;
+                    }
+                    break;
+
+                case 'analytics':
+                    if (data.analytics) {
+                        html = `
+                            <h4>Analytics Data (Last 5 entries)</h4>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Endpoint</th>
+                                        <th>IP Address</th>
+                                        <th>Referer</th>
+                                        <th>Created</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${data.analytics.sample_data.map(item => `
+                                        <tr>
+                                            <td>${item.id}</td>
+                                            <td>${item.endpoint}</td>
+                                            <td>${item.ip_address || 'N/A'}</td>
+                                            <td>${item.referer || 'Direct'}</td>
+                                            <td>${new Date(item.created_at).toLocaleString()}</td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                            <p class="muted" style="margin-top: 12px;">Total analytics entries: ${data.analytics.count}</p>
+                        `;
+                    }
+                    break;
+            }
+
+            document.getElementById(containerId).innerHTML = html;
+        }
+
+        async function deleteWaitlist(id) {
+            if (confirm('Are you sure you want to delete this waitlist entry?')) {
+                try {
+                    // Since we don't have a DELETE endpoint, we'll simulate it
+                    showToast('Delete functionality would be implemented with a proper DELETE endpoint', 'error');
+                } catch (error) {
+                    showToast('Error deleting entry', 'error');
+                }
+            }
+        }
+
+        async function deleteEnrollment(id) {
+            if (confirm('Are you sure you want to delete this enrollment?')) {
+                try {
+                    // Since we don't have a DELETE endpoint, we'll simulate it
+                    showToast('Delete functionality would be implemented with a proper DELETE endpoint', 'error');
+                } catch (error) {
+                    showToast('Error deleting enrollment', 'error');
+                }
+            }
+        }
+
+        async function updateEnrollment(id, status) {
+            try {
+                // Since we don't have an UPDATE endpoint, we'll simulate it
+                showToast(`Enrollment ${id} would be updated to ${status} with a proper PATCH endpoint`, 'success');
+            } catch (error) {
+                showToast('Error updating enrollment', 'error');
+            }
+        }
+
+        async function checkHealth() {
+            try {
+                const response = await fetch(`${API_BASE}/api/health`);
+                const data = await response.json();
+
+                document.getElementById('health-data').innerHTML = `
+                    <div style="display: grid; gap: 12px;">
+                        <div><strong>Status:</strong> <span style="color: var(--accent)">${data.status}</span></div>
+                        <div><strong>Database:</strong> <span style="color: ${data.database === 'connected' ? 'var(--accent)' : '#ef4444'}">${data.database}</span></div>
+                        <div><strong>Environment:</strong> ${data.environment}</div>
+                        <div><strong>Timestamp:</strong> ${new Date(data.timestamp).toLocaleString()}</div>
+                        <div><strong>Tables:</strong> ${data.tables ? data.tables.join(', ') : 'N/A'}</div>
+                    </div>
+                `;
+                showToast('System health checked successfully!');
+            } catch (error) {
+                showToast('Error checking system health', 'error');
+            }
+        }
+
+        // Tab functionality
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and panes
+                document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                // Show corresponding pane
+                const tabName = tab.getAttribute('data-tab');
+                document.getElementById(`${tabName}-tab`).classList.add('active');
+
+                // Load data for the tab
+                if (tabName !== 'health') {
+                    refreshData(tabName);
+                }
+            });
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('open');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mainNav.classList.remove('open');
+            }
+        });
+
+        // Initialize
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Load initial data
+        loadStats();
+        refreshData('waitlist');
+
+        // Join waitlist with API integration
+        const emailInput = document.getElementById('email');
+        const joinBtn = document.getElementById('joinBtn');
+        const msg = document.getElementById('msg');
+
+        joinBtn.addEventListener('click', async () => {
+            const val = emailInput.value.trim();
+            if (!val || !/^[\w-.+]+@[\w-]+\.[\w-.]+$/.test(val)) {
+                msg.textContent = 'Please enter a valid email address.';
+                msg.style.color = '#ef4444';
+                return;
+            }
+
+            setLoading(joinBtn, true);
+            msg.textContent = 'Adding to waitlist...';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/waitlist`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: val })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    setSuccess(joinBtn, 'Reserved');
+                    msg.textContent = data.message;
+                    msg.style.color = 'var(--accent)';
+                    showToast('Successfully added to waitlist!');
+                    // Refresh the admin panel data
+                    loadStats();
+                    refreshData('waitlist');
+                } else {
+                    throw new Error(data.detail || 'Failed to join waitlist');
+                }
+            } catch (error) {
+                console.error('Waitlist error:', error);
+                msg.textContent = error.message;
+                msg.style.color = '#ef4444';
+                showToast(error.message, 'error');
+            } finally {
+                setLoading(joinBtn, false);
+            }
+        });
+
+        // Modal syllabus
+        const modal = document.getElementById('modal');
+        document.getElementById('learnMore').addEventListener('click', () => modal.classList.add('open'));
+        document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('open'));
+        modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open') });
+
+        // Enroll form with API integration
+        const enrollForm = document.getElementById('enrollForm');
+        const enrollMsg = document.getElementById('enrollMsg');
+        const submitBtn = enrollForm.querySelector('button[type="submit"]');
+
+        enrollForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(enrollForm);
+            const name = formData.get('name') || '';
+            const email = formData.get('email') || '';
+            const track = formData.get('track') || '';
+
+            if (!name.trim() || !email.trim() || !track.trim()) {
+                enrollMsg.textContent = 'Please complete all fields.';
+                enrollMsg.style.color = '#ef4444';
+                return;
+            }
+
+            setLoading(submitBtn, true);
+            enrollMsg.textContent = 'Processing your application...';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/enroll`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name.trim(),
+                        email: email.trim(),
+                        track: track.trim()
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    enrollMsg.textContent = data.message;
+                    enrollMsg.style.color = 'var(--accent)';
+                    showToast('Application submitted successfully!');
+                    enrollForm.reset();
+                    // Refresh the admin panel data
+                    loadStats();
+                    refreshData('enrollments');
+                } else {
+                    throw new Error(data.detail || 'Failed to submit application');
+                }
+            } catch (error) {
+                console.error('Enrollment error:', error);
+                enrollMsg.textContent = error.message;
+                enrollMsg.style.color = '#ef4444';
+                showToast(error.message, 'error');
+            } finally {
+                setLoading(submitBtn, false);
+            }
+        });
+
+        // Demo button
+        document.getElementById('demoBtn').addEventListener('click', () => {
+            showToast('Demo request received! We\'ll contact you soon.');
+        });
+
+        // Scholarship button
+        document.getElementById('scholarshipBtn').addEventListener('click', () => {
+            showToast('Scholarship application opened in new window');
+            setTimeout(() => {
+                const name = prompt('Enter your name for scholarship consideration:');
+                if (name) {
+                    showToast(`Thanks ${name}! We've noted your interest in scholarships.`);
+                }
+            }, 500);
+        });
+
+        // Add scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+
+            let progressBar = document.querySelector('.progress-bar');
+            if (!progressBar) {
+                const progressContainer = document.createElement('div');
+                progressContainer.className = 'progress-container';
+                progressBar = document.createElement('div');
+                progressBar.className = 'progress-bar';
+                progressContainer.appendChild(progressBar);
+                document.querySelector('header').appendChild(progressContainer);
+            }
+
+            progressBar.style.width = scrolled + '%';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    mainNav.classList.remove('open');
+
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards for animation
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
